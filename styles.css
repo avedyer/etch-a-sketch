@@ -1,0 +1,50 @@
+body {
+    background-color: palegoldenrod;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    line-height: 2;
+}
+
+main {
+    background-color: lightsalmon;
+    width: 70vw;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    background-color: cyan;
+    height: auto;  
+    flex-basis: 300px;
+    flex-shrink: 3;
+    display: flex;  
+    flex-direction: column;
+    flex-wrap: wrap; 
+}
+
+.grid {
+    background-color: plum;
+    width: 60vw;
+    height: 60vw;
+    max-height: 700px;
+    max-width: 700px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+button {
+    margin-bottom: 30px;
+    height: 40px;
+    width: 120px;
+}
+
