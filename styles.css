@@ -1,5 +1,5 @@
 body {
-    background-color: palegoldenrod;
+    background-color: lightgray;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -12,28 +12,19 @@ h1 {
 }
 
 main {
-    background-color: lightsalmon;
-    width: 70vw;
-    height: 80vh;
-    margin: auto;
+    height: 90vh;
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
     justify-content: center;
-    align-items: center;
-}
-
-.options {
-    background-color: cyan;
-    height: auto;  
-    flex-basis: 300px;
-    flex-shrink: 3;
-    display: flex;  
-    flex-direction: column;
-    flex-wrap: wrap; 
+    align-content: flex-start;
+    width: 90vw;
+    margin: auto;
+    padding-top: 40px;
 }
 
 .grid {
-    background-color: plum;
+    background-color: white;
     width: 60vw;
     height: 60vw;
     max-height: 700px;
@@ -42,9 +33,52 @@ main {
     min-height: 300px;
 }
 
-button {
-    margin-bottom: 30px;
-    height: 40px;
-    width: 120px;
+.options {
+    height: max-content;
+    width: 180px;
+    padding: 10px;
+    align-self: center;
 }
+
+.drawMode{
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 80px;
+    width: 120px;
+    margin: 20px auto 20px auto;
+}
+
+.range {
+    display: block;
+    width: 80%;
+    max-width: 250px;
+    margin: 20px auto 0px auto;
+}
+
+@media (max-width: 961px) {
+    main {
+        padding: 0;
+    }
+    .options{
+        width: 60vw;
+        padding-top: 10px;
+    } 
+
+    .drawMode{
+        align-content: center;
+        align-items: flex-start;
+        height: 160px;
+        width: inherit;
+        flex-wrap: wrap;
+    }
+
+    button {
+        height: 60px;
+        margin: 5px;
+    }
+}
+
 
