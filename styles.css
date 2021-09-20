@@ -4,10 +4,10 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     line-height: 2;
 }
 

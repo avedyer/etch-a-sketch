@@ -9,18 +9,19 @@
     <body>
         <h1>Etch-a-Sketch</h1>
 
-        <main>
+        <main>  
             <div class="grid">
 
             </div>
             <div class="options">
-                <form class="drawMode">
-                    <button type="submit">Black</button>
-                    <button type="submit">Rainbow</button>
-                    <button type="submit">Eraser</button>
-                    <button type="submit">Reset</button>
+                <form class="drawMode" onsubmit="return false">
+                    <button value="Black">Black</button>
+                    <button value="Rainbow">Rainbow</button>
+                    <button value="Eraser">Eraser</button>
+                    <button value="Reset">Reset</button>
                 </form>
-                <input type="range" class="range">
+                <input type="range" class="range" step="16" min="16" max="96">
+                <h4>16 x 16</h4>
             </div>
         </main>
 
