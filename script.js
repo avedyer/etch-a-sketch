@@ -2,30 +2,38 @@ let canvas = document.querySelector(".grid");
 let range = document.querySelector(".range");
 let drawModeButtons = document.querySelectorAll("button");
 let drawMode = "black";
-let canvasSize = range.value;
+let canvasSize = 16;
 let pixels = [];
 
 for (let drawModeButton of drawModeButtons) {
-    console.log(drawModeButton);
     drawModeButton.addEventListener("click", function() {
         drawMode = drawModeButton.value;
-        console.log(drawMode);
-        return false;
+        console.log(`Draw Mode set to ${drawMode}`);
     })
 }
 
 let reformatCanvas = function() {
     canvasSize = range.value;
+    canvas.innerHTML = "";
+    for (let i=0; i<canvasSize**2; i++){
+        canvas.innerHTML += `<div class="pixel"></div>`;
+    }
     pixels = document.querySelectorAll(".pixel")
     for (let pixel of pixels) {
         pixel.addEventListener('onhover', adjustColor());
-    }//TODO
+    }
     console.log(`Canvas reformatted to ${canvasSize} x ${canvasSize}`);
-    //TODO
 };
 
 let adjustColor = function() {
     //TODO
+
 }
+
+range.addEventListener("change", function() { 
+    canvasSize = range.value;
+    console.log(`Range slider moved to ${canvasSize} x ${canvasSize}`)
+    reformatCanvas();
+})
 
 window.addEventListener("DOMContentLoaded", reformatCanvas());
