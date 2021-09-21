@@ -14,14 +14,14 @@
 
             </div>
             <div class="options">
-                <form class="drawMode">
+                <form class="drawMode" onsubmit="return false">
                     <button value="Black">Black</button>
                     <button value="Rainbow">Rainbow</button>
                     <button value="Eraser">Eraser</button>
                     <button value="Reset">Reset</button>
                 </form>
                 <input type="range" class="range" step="2" min="8" max="16">
-                <h4>16 x 16</h4>
+                <h4 id="rangeCaption"></h4>
             </div>
         </main>
 
