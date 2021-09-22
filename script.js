@@ -35,7 +35,7 @@ let resize = function() {
     //pixelSize is changed as a function of canvasSize, shrunk slightly to avoid overflow.
     //only width value is used for calculations as canvas is a constant square.
 
-    let pixelSize = (canvasSize / pixelCount) - 1;
+    let pixelSize = Math.floor(canvasSize / pixelCount);
     pixels = document.querySelectorAll(".pixel")
     for (let pixel of pixels) {
         pixel.style.width = pixelSize + "px";
@@ -47,6 +47,7 @@ let resize = function() {
 
 let reformatCanvas = function() {
     pixelCount = range.value;
+
     //writes new pixels when canvas is reset.
 
     canvas.innerHTML = "";
@@ -59,7 +60,8 @@ let reformatCanvas = function() {
 
     pixels = document.querySelectorAll(".pixel")
     for (let pixel of pixels) {
-        //event listeners to change pixel color on mouseover
+
+        //adds event listeners to change pixel color on mouseover
 
         pixel.addEventListener("mouseover", function(){
             let color;
