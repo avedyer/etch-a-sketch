@@ -12,6 +12,7 @@ h1 {
 }
 
 main {
+    background-color: lightgray;
     height: 90vh;
     display: flex;
     flex-wrap: wrap;
@@ -30,11 +31,11 @@ button {
 }
 
 .pixel {
-
 }
 
 .grid {
-    background-color: white;
+    background-color: lightgray;
+    opacity: 1;
     width: 60vw;
     height: 60vw;
     max-height: 700px;
@@ -43,6 +44,9 @@ button {
     min-height: 300px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    border: 1px solid lightgray;
 }
 
 .options {
